@@ -8,10 +8,19 @@
 <body>
     <h1> ようこそ </h1>
     <p> ありがとう </p>
-    <button type="button" onclick="ShowAlert()">ここをクリック</button>
+    <p>
+        <input id="left" type="text" name="name" size="3"> 
+        +
+        <input id="right" type="text" name="name" size="3">
+        =
+        <button type="button" onclick="CalcSum()">答えを表示</button>
+    </p>
     <script>
-    function ShowAlert() {
-        alert("Hello world!!");
+    function CalcSum() {
+        let elm_l = document.getElementById('left');
+        let elm_r = document.getElementById('right');
+        alert(Number(elm_l.value)+Number(elm_r.value));
+
     }
     </script>
 </body>
